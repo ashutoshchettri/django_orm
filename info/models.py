@@ -19,7 +19,7 @@ class Product(models.Model):
         return self.name
 
 class Order(models.Model):
-    customer=models.ForeignKey(Customer,on_delete=models.DO_NOTHING)
+    customer=models.ForeignKey(Customer,on_delete=models.CASCADE)
     product=models.ForeignKey(Product,on_delete=models.CASCADE)
     quantity=models.IntegerField()
     date=models.DateField()
